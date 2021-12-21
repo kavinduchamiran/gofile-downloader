@@ -1,7 +1,7 @@
 import os
 import json
 from gofile_downloader import GoFile
-
+import sys
 
 global config
 config = __import__("json").load(open("config.json"))
@@ -38,4 +38,4 @@ def main(gofile_url: str):
 
 
 if __name__ == "__main__":
-    main(config["URL"])
+    main(sys.argv[1])
